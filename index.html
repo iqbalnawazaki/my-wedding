@@ -566,7 +566,11 @@
 
 <!-- modal -->
 <!-- Modal Fullscreen xl -->
-
+<iframe src="https://storage.wedew.id/uploads/public/60c/a69/278/60ca692789fad147558959.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+</iframe> 
+<audio autoplay loop  id="playAudio">
+  <source src="Happy Birthday Song.mp3">
+</audio>
 <!-- modal -->
 <section class="text-center" style="display: block!important; visibility: visible!important; background: #fff; font-family: -apple-system,system-ui,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;">
     <a target="_blank" class="text-center">
@@ -659,9 +663,10 @@
 </script>
 
 <script>
-    window.onload = function() {
-        $('#exampleModal').modal('show');
-    }
+   //jquery
+ $(document).ready(function() {
+   $("#playAudio").get(0).play();
+ });
 </script>
 <script>
     function animation(span) {
