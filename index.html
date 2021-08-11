@@ -610,6 +610,13 @@
 </script> -->
 <script>
   window.onload = function() {
+    const link = new URLSearchParams(window.location.search);
+    const name = link.get('penerima');
+    if (name) {
+        $('#nama_penerima').html(name);   
+    }
+    $('#exampleModal').modal('show');
+      
     'use strict';
     
     if (!window.NAWAZAKI_BACKGROUND_MUSIC) return;
@@ -672,20 +679,10 @@
 </script>
 
 <script>
-    window.onload = function() {
-        const link = new URLSearchParams(window.location.search);
-        const name = link.get('penerima');
-        if (name) {
-            $('#nama_penerima').html(name);   
-        }
-        $('#exampleModal').modal('show');
-    }
-
     function add_fixed() {
         $('#backgroundMusicButton').addClass('position-fixed');
         document.getElementById('slider-sec').scrollIntoView({ behavior: 'smooth' });
     }
-
 </script>
 <script>
     function animation(span) {
