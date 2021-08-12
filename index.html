@@ -611,7 +611,7 @@
 <script>
   window.onload = function() {
     const link = new URLSearchParams(window.location.search);
-    const name = link.get('penerima');
+    const name = link.get('to');
     if (name) {
         $('#nama_penerima').html(name);   
     }
