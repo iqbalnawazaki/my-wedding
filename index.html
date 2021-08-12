@@ -213,12 +213,19 @@
                 <h1 data-aos="zoom-in-up" class="pb-4" style="font-family: 'Dancing Script', cursive; font-size: 36px;">Riri & Zaki</h1>
                 <div class="wdp-dear" style="font-family: 'Montserrat', sans-serif;
                 font-size: 14px;">Kepada Bapak/Ibu/Saudara/i</div>
-                <div class="wdp-name pt-4 pb-4 mb-0" style="font-family: 'Montserrat', sans-serif;
+                <div class="wdp-name pt-2 pb-0 mb-0" style="font-family: 'Montserrat', sans-serif;
                 font-weight: 600;
                 font-size: 20px;
                 color: #b6a85a;
                 margin-bottom: 10px;
                 display: block;" id="nama_penerima">-----------</div>
+                <div>&</div>
+                <div class="wdp-name pt-0 pb-2" style="font-family: 'Montserrat', sans-serif;
+                font-weight: 600;
+                font-size: 20px;
+                color: #b6a85a;
+                margin-bottom: 10px;
+                display: block;" id="group_name">-----------</div>
                 <div class="wdp-text" style="font-family: 'Montserrat', sans-serif;
                 font-size: 11px;">Mohon maaf bila ada kesalahan pada penulisan nama/gelar</div>
                 <div class="pt-4">
@@ -615,8 +622,10 @@
   window.onload = function() {
     const link = new URLSearchParams(window.location.search);
     const name = link.get('to');
+    const name_group = link.get('g');
     if (name) {
-        $('#nama_penerima').html(name);   
+        $('#nama_penerima').html(name);
+        $('#group_name').html(name_group);
     }
     $('#exampleModal').modal('show');
       
