@@ -219,7 +219,7 @@
                 color: #b6a85a;
                 margin-bottom: 10px;
                 display: block;" id="nama_penerima">-----------</div>
-                <div>&</div>
+                <div id="id_dan">&</div>
                 <div class="wdp-name pt-0 pb-2 mb-0" style="font-family: 'Montserrat', sans-serif;
                 font-weight: 600;
                 font-size: 20px;
@@ -622,6 +622,8 @@
     const link = new URLSearchParams(window.location.search);
     const name = link.get('to');
     const name_group = link.get('g');
+    if(name_group == null){$("#id_dan").remove();}
+      
     if (name) {
         $('#nama_penerima').html(name);
         $('#group_name').html(name_group);
